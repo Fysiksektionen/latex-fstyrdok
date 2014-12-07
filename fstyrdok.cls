@@ -45,6 +45,7 @@
 %-----------------------------------------------------------%
 \makeatletter
 \typeout{\@currname}
+
 % inputenc: Gör det möjligt att använda specialtecken som å, ä och ö.
 \RequirePackage[\fstyrdok@inputenc]{inputenc}
 % babel: Avstavning, rubriker på innehållsförteckning m.m., språkanpassat
@@ -77,6 +78,7 @@
 % hyperref: Skapar bokmärken i pdf-filer, gör hänvisningar till länkar, mm
 \definecolor{orange}{wave}{612.2}\definecolor{dark-blue}{rgb}{0,0,.1}
 \RequirePackage[pdftex,bookmarks,colorlinks,linkcolor=dark-blue]{hyperref}
+
 
 %-----------------------------------------------------------%
 %			MAKRON FÖR ATT FÖRENKLA SWITCH		%
@@ -123,11 +125,11 @@
 %			SEKTIONSRELATERADE SYMBOLER 			%
 %-----------------------------------------------------------%
 % fkm*
-\DeclareRobustCommand{\fkm}{\ensuremath{\lowercase{\mathrm{\raisebox{-0.1ex}{\rotatebox{22}{f}}\!\raisebox{0.2ex}{\rotatebox{-15}{k}}\!m^{*}}}}}
+\DeclareRobustCommand{\fkm}{\raisebox{-0.1ex}{\rotatebox{22}{\ensuremath{\lowercase{\mathrm{f}}}}}\!\raisebox{0.2ex}{\rotatebox{-15}{\ensuremath{\lowercase{\mathrm{k}}}}}\!\ensuremath{\lowercase{\mathrm{m^{*}}}}}
 % Chargé d'Affaires
 \DeclareRobustCommand{\cda}{Charg\'e d'Affaires}
 % n0ll
-\DeclareRobustCommand{\noll}{n\ensuremath{\emptyset}ll}
+\DeclareRobustCommand{\noll}{n\O ll}
 
 %-----------------------------------------------------------%
 %			FÄLTDEFINITIONER OCH ANNAT			%
